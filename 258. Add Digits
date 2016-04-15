@@ -1,0 +1,20 @@
+class Solution(object):
+    def addDigits(self, num):
+        """
+        :type num: int
+        :rtype: int
+        """
+        x = num % 9
+        if not x and num:
+            return 9
+        else:
+            return x
+        '''
+        while num > 9:
+            c = 0
+            while num:
+                c += num % 10
+                num /= 10
+            num = c
+        return num
+        '''
